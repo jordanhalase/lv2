@@ -55,6 +55,18 @@ param:frequency
 	rdfs:range atom:Float ;
 	rdfs:label "frequency" .
 
+param:frequencyOffset
+	a lv2:Parameter ;
+	rdfs:range atom:Float ;
+	rdfs:label "frequency offset" ;
+	rdfs:comment "An oscillator's frequency offset." .
+
+param:frequencyRatio
+	a lv2:Parameter ;
+	rdfs:range atom:Float ;
+	rdfs:label "frequency ratio" ;
+	rdfs:comment "A multiple of an oscillator's frequency." .
+
 param:hold
 	a lv2:Parameter ;
 	rdfs:range atom:Float ;
@@ -178,6 +190,10 @@ param:OscillatorControls
 	rdfs:label "Oscillator Controls" ;
 	pg:element [
 		lv2:designation param:frequency
+	] , [
+		lv2:designation param:frequencyOffset
+	] , [
+		lv2:designation param:frequencyRatio
 	] , [
 		lv2:designation param:amplitude
 	] , [
